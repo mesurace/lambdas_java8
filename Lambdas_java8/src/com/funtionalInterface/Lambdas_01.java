@@ -1,6 +1,7 @@
 package com.funtionalInterface;
 
 import java.util.function.Consumer;
+import java.util.function.Function;
 import java.util.function.Predicate;
 
 /**
@@ -19,6 +20,13 @@ public class Lambdas_01 {
 		//one input no output
 		Consumer<String> consumer=(s)-> System.out.println(s.toLowerCase());
 		consumer.accept("Java 8-Functional Interfaces-Consumer");
+		
+		//Function Example
+		Function<Integer,String> function=(num)->Integer.toString(num);
+		System.out.println(function.apply(5));
+		
+		
+		
 		
 	}
 
