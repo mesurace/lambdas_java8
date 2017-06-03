@@ -1,5 +1,6 @@
 package com.funtionalInterface;
 
+import java.util.function.BinaryOperator;
 import java.util.function.Consumer;
 import java.util.function.Function;
 import java.util.function.Predicate;
@@ -26,9 +27,13 @@ public class Lambdas_01 {
 		Function<Integer,String> function=(num)->Integer.toString(num);
 		System.out.println(function.apply(5));
 		
+		//Supplier only has output
 		Supplier<String> supplier=()->"Hi! how are you ?";
 		System.out.println(supplier.get());
 		
+		//binary operator example .It knows all are type Integer
+		BinaryOperator<Integer> add= (a,b)->a+b;
+		System.out.println(add.apply(5, 5));
 		
 		
 		
