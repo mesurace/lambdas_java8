@@ -3,6 +3,7 @@ package com.funtionalInterface;
 import java.util.function.Consumer;
 import java.util.function.Function;
 import java.util.function.Predicate;
+import java.util.function.Supplier;
 
 /**
  * @author Suresh Adhikari
@@ -24,6 +25,9 @@ public class Lambdas_01 {
 		//Function Example
 		Function<Integer,String> function=(num)->Integer.toString(num);
 		System.out.println(function.apply(5));
+		
+		Supplier<String> supplier=()->"Hi! how are you ?";
+		System.out.println(supplier.get());
 		
 		
 		
