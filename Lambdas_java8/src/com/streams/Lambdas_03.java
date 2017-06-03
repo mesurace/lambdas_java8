@@ -6,6 +6,8 @@ package com.streams;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Stream;
+import java.util.stream.Collector;
+import java.util.stream.Collectors;
 
 /**
  * @author Suresh Adhikari
@@ -24,6 +26,8 @@ public class Lambdas_03 {
 			return fruit.startsWith("O");
 		}).forEach(f -> System.out.println(f));
 
+		List<String> collected = Stream.of(fruits).map(mapper -> mapper.toUpperCase()).collect(Collectors.toList());
+		System.out.println(collected.toString());
 	}
 
 }
