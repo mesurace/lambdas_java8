@@ -43,8 +43,8 @@ public class Lambdas_01 {
 		// own functional interface
 		Calculate addition = (a, b) -> a + b;
 		Calculate substraction = (a, b) -> a - b;
-		Calculate division = (a, b) -> a/b;
-		Calculate multiplication = (a, b) -> a*b;
+		Calculate division = (a, b) -> b != 0 ? a / b : 0;
+		Calculate multiplication = (a, b) -> a * b;
 
 		System.out.println(addition.calc(5, 5));
 		System.out.println(substraction.calc(5, 5));
